@@ -15,7 +15,7 @@ def plot_clusters_cancer(data, clusters):
         data=data[~outlier_indices],
         x="x",
         y="y",
-        hue=data['diagnosis'],
+        hue=clusters[~outlier_indices],
         palette="muted",
         legend=True,
     )
